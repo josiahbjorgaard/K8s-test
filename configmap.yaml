@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: release-name-nginx
+  labels:
+    app.kubernetes.io/instance: release-name
+    app.kubernetes.io/name: nginx
+data:
+  # When the config map is mounted as a volume, these will be created as files.
+  index.html: "<h1>Hello</h1> <p>This is a test</p>"
+  test.txt: test

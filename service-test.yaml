@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "release-name-nginx-service-test"
+  labels:
+    app.kubernetes.io/instance: release-name
+    app.kubernetes.io/name: nginx
+spec:
+  containers:
+    - name: curl
+      image: radial/busyboxplus:curl
